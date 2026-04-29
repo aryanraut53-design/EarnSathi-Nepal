@@ -1,6 +1,6 @@
-import { Star, CheckCircle2, ThumbsUp, Clock } from 'lucide-react';
-import { motion, useAnimationControls } from 'motion/react';
-import { useState, useEffect } from 'react';
+import { Star, CheckCircle2, ThumbsUp } from 'lucide-react';
+import { motion, useMotionValue, animate } from 'motion/react';
+import { useState, useEffect, useRef } from 'react';
 
 interface Review {
   initials: string;
@@ -11,30 +11,77 @@ interface Review {
   rating: number;
   color: string;
   earnedAmount: string;
-  timeOnPlatform: string;
   payoutMethod: 'eSewa' | 'Khalti';
   isVerified: boolean;
-  date: string;
 }
 
 export default function Testimonials() {
-  const [isPaused, setIsPaused] = useState(false);
-  const controls = useAnimationControls();
+  const x = useMotionValue(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [halfWidth, setHalfWidth] = useState(0);
+  const isPausedRef = useRef(false);
 
   useEffect(() => {
-    if (isPaused) {
-      controls.stop();
-    } else {
-      controls.start({
-        x: ["0%", "-50%"],
-        transition: {
-          duration: 50,
-          repeat: Infinity,
-          ease: "linear",
-        }
+    if (!containerRef.current) return;
+    // Measure half the scroll width (one full set of reviews)
+    setHalfWidth(containerRef.current.scrollWidth / 2);
+  }, []);
+
+  useEffect(() => {
+    if (halfWidth === 0) return;
+
+    let controls: ReturnType<typeof animate> | null = null;
+
+    const startScroll = () => {
+      const currentX = x.get();
+      // How far left is remaining until we hit -halfWidth
+      const remaining = Math.abs(-halfWidth - currentX);
+      // Keep speed constant: total distance / duration = pixels per second
+      const pixelsPerSecond = 40;
+      const duration = remaining / pixelsPerSecond;
+
+      controls = animate(x, -halfWidth, {
+        duration,
+        ease: 'linear',
+        onComplete: () => {
+          // Seamlessly reset to 0 and restart
+          x.set(0);
+          if (!isPausedRef.current) startScroll();
+        },
       });
+    };
+
+    const handlePause = () => {
+      isPausedRef.current = true;
+      controls?.stop();
+    };
+
+    const handleResume = () => {
+      isPausedRef.current = false;
+      startScroll();
+    };
+
+    // Store handlers on the ref element for event binding
+    const el = containerRef.current;
+    if (el) {
+      el.addEventListener('mouseenter', handlePause);
+      el.addEventListener('mouseleave', handleResume);
+      el.addEventListener('touchstart', handlePause, { passive: true });
+      el.addEventListener('touchend', handleResume);
     }
-  }, [isPaused, controls]);
+
+    startScroll();
+
+    return () => {
+      controls?.stop();
+      if (el) {
+        el.removeEventListener('mouseenter', handlePause);
+        el.removeEventListener('mouseleave', handleResume);
+        el.removeEventListener('touchstart', handlePause);
+        el.removeEventListener('touchend', handleResume);
+      }
+    };
+  }, [halfWidth, x]);
 
   const reviews: Review[] = [
     {
@@ -46,10 +93,8 @@ export default function Testimonials() {
       rating: 5,
       color: "bg-gradient-to-br from-indigo-500 to-purple-600 text-white",
       earnedAmount: "Rs. 1,280",
-      timeOnPlatform: "3 weeks",
       payoutMethod: "eSewa",
       isVerified: true,
-      date: "2 days ago"
     },
     {
       initials: "BT",
@@ -60,10 +105,8 @@ export default function Testimonials() {
       rating: 5,
       color: "bg-gradient-to-br from-blue-500 to-indigo-600 text-white",
       earnedAmount: "Rs. 3,750",
-      timeOnPlatform: "2 months",
       payoutMethod: "Khalti",
       isVerified: true,
-      date: "5 days ago"
     },
     {
       initials: "PS",
@@ -74,10 +117,8 @@ export default function Testimonials() {
       rating: 5,
       color: "bg-gradient-to-br from-rose-400 to-orange-500 text-white",
       earnedAmount: "Rs. 2,100",
-      timeOnPlatform: "1 month",
       payoutMethod: "Khalti",
       isVerified: true,
-      date: "1 week ago"
     },
     {
       initials: "NK",
@@ -88,10 +129,8 @@ export default function Testimonials() {
       rating: 4,
       color: "bg-gradient-to-br from-emerald-400 to-teal-500 text-white",
       earnedAmount: "Rs. 890",
-      timeOnPlatform: "3 weeks",
       payoutMethod: "eSewa",
       isVerified: true,
-      date: "3 days ago"
     },
     {
       initials: "AG",
@@ -102,10 +141,8 @@ export default function Testimonials() {
       rating: 5,
       color: "bg-gradient-to-br from-amber-400 to-orange-500 text-white",
       earnedAmount: "Rs. 1,650",
-      timeOnPlatform: "6 weeks",
       payoutMethod: "eSewa",
       isVerified: true,
-      date: "4 days ago"
     },
     {
       initials: "RD",
@@ -116,10 +153,8 @@ export default function Testimonials() {
       rating: 5,
       color: "bg-gradient-to-br from-cyan-500 to-blue-600 text-white",
       earnedAmount: "Rs. 4,200",
-      timeOnPlatform: "3 months",
       payoutMethod: "Khalti",
       isVerified: true,
-      date: "1 day ago"
     },
     {
       initials: "SM",
@@ -130,10 +165,8 @@ export default function Testimonials() {
       rating: 5,
       color: "bg-gradient-to-br from-pink-500 to-rose-600 text-white",
       earnedAmount: "Rs. 2,800",
-      timeOnPlatform: "2 months",
       payoutMethod: "Khalti",
       isVerified: true,
-      date: "6 days ago"
     },
     {
       initials: "DP",
@@ -144,10 +177,8 @@ export default function Testimonials() {
       rating: 4,
       color: "bg-gradient-to-br from-violet-500 to-purple-600 text-white",
       earnedAmount: "Rs. 1,950",
-      timeOnPlatform: "5 weeks",
       payoutMethod: "eSewa",
       isVerified: true,
-      date: "2 days ago"
     }
   ];
 
@@ -182,34 +213,26 @@ export default function Testimonials() {
           
           <div className="overflow-hidden">
             <motion.div 
+              ref={containerRef}
               className="flex gap-8 w-max"
-              animate={controls}
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
-              onClick={() => setIsPaused(!isPaused)}
-              style={{ display: 'flex' }}
+              style={{ x }}
             >
               {/* Double the list for infinite effect */}
               {[...reviews, ...reviews].map((review, i) => (
                 <motion.div 
                   key={i}
                   whileHover={{ y: -8, scale: 1.01 }}
-                  className="w-[320px] sm:w-[380px] flex-shrink-0 bg-white dark:bg-white/5 backdrop-blur-md p-7 rounded-[2rem] border border-slate-200 dark:border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-2xl flex flex-col hover:bg-slate-50 dark:hover:bg-white/[0.07] hover:border-slate-300 dark:hover:border-white/20 transition-all duration-300 cursor-pointer group"
+                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  className="w-[320px] sm:w-[380px] flex-shrink-0 bg-white dark:bg-white/5 backdrop-blur-md p-7 rounded-[2rem] border border-slate-200 dark:border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-2xl flex flex-col hover:bg-slate-50 dark:hover:bg-white/[0.07] hover:border-slate-300 dark:hover:border-white/20 transition-colors duration-300 cursor-pointer group"
                 >
-                  {/* Header: Stars + Date */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, j) => (
-                        <Star 
-                          key={j}
-                          className={`w-4 h-4 ${j < review.rating ? 'fill-yellow-400 text-yellow-400' : 'fill-slate-200 dark:fill-slate-700 text-slate-200 dark:text-slate-700'}`} 
-                        />
-                      ))}
-                    </div>
-                    <span className="flex items-center gap-1 text-[10px] text-slate-400 dark:text-slate-500">
-                      <Clock className="w-3 h-3" />
-                      {review.date}
-                    </span>
+                  {/* Stars */}
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, j) => (
+                      <Star 
+                        key={j}
+                        className={`w-4 h-4 ${j < review.rating ? 'fill-yellow-400 text-yellow-400' : 'fill-slate-200 dark:fill-slate-700 text-slate-200 dark:text-slate-700'}`} 
+                      />
+                    ))}
                   </div>
 
                   {/* Quote */}
@@ -249,10 +272,6 @@ export default function Testimonials() {
                       <span className="text-slate-500 dark:text-slate-400 text-[11px] leading-tight">
                         {review.role} · {review.location}
                       </span>
-                    </div>
-                    <div className="text-right shrink-0">
-                      <span className="text-[9px] font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider block">Active</span>
-                      <span className="text-[10px] font-bold text-slate-600 dark:text-slate-300">{review.timeOnPlatform}</span>
                     </div>
                   </div>
                 </motion.div>
