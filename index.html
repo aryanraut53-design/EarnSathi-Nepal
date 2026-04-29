@@ -1,55 +1,194 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EarnSathi – Earn Points & Redeem via eSewa/Khalti | Nepal's #1 Rewards App</title>
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <meta name="description" content="Download EarnSathi APK – Nepal's trusted rewards app. Complete tasks, earn points, and instantly redeem via eSewa or Khalti. Safe, free, no Play Store needed." />
-    <link rel="canonical" href="https://earnsathi.com" />
-    <link rel="alternate" hreflang="np" href="https://earnsathi.com/" />
-    
-    <!-- OpenGraph / Social preview -->
-    <meta property="og:title" content="EarnSathi – Earn & Redeem via eSewa/Khalti" />
-    <meta property="og:description" content="Nepal's #1 rewards app. Download free APK and start earning today." />
-    <meta property="og:image" content="https://earnsathi.com/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://earnsathi.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="ne_NP" />
-    <meta name="twitter:card" content="summary_large_image" />
 
-    <script type="application/ld+json">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EarnSathi – Nepal's #1 Rewards App | Earn Points & Redeem via eSewa & Khalti</title>
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+
+  <!-- Primary SEO Meta -->
+  <meta name="description"
+    content="EarnSathi is Nepal's most trusted rewards app. Download the free APK, complete fun micro-tasks like quizzes, spin wheels & scratch cards, earn points, and instantly redeem via eSewa or Khalti. No Play Store needed. 100% safe & verified." />
+  <meta name="keywords"
+    content="EarnSathi, EarnSathi app, EarnSathi Nepal, EarnSathi APK, EarnSathi download, EarnSathi rewards, EarnSathi eSewa, EarnSathi Khalti, EarnSathi app download, EarnSathi earn money, EarnSathi points, EarnSathi Nepal app, earn money Nepal, rewards app Nepal, eSewa rewards app, Khalti rewards app, earn points app Nepal, Nepal earning app, free APK download Nepal, online earning Nepal, paisa kamaaune app, micro tasks Nepal, spin and earn Nepal, quiz and earn Nepal, scratch card rewards Nepal, mobile earning app Nepal, digital rewards Nepal, Nepali reward platform, earn from phone Nepal, payout eSewa Khalti, side income Nepal, free rewards app Nepal, gamified earning app, Nepal money making app, earn rewards online Nepal, best earning app Nepal 2026, EarnSathi review, EarnSathi safe, EarnSathi legit, EarnSathi payout, EarnSathi withdraw, EarnSathi trusted, EarnSathi verified, EarnSathi secure, EarnSathi VirusTotal, trusted rewards app Nepal, verified earning app Nepal, safe earning app Nepal, no scam earning app Nepal, legit rewards app Nepal, trusted eSewa earning app, secure Khalti rewards, VirusTotal verified APK, SSL secured rewards app, anti-fraud earning app Nepal, genuine rewards Nepal, real payout app Nepal, honest earning app Nepal" />
+  <meta name="author" content="EarnSathi Nepal" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="application-name" content="EarnSathi" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="EarnSathi" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+  <!-- Geo Tags for Nepal targeting -->
+  <meta name="geo.region" content="NP" />
+  <meta name="geo.placename" content="Sarlahi, Nepal" />
+  <meta name="geo.position" content="27.0;85.6" />
+  <meta name="ICBM" content="27.0, 85.6" />
+  <meta name="content-language" content="en" />
+
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="canonical" href="https://earn-sathi-nepal.vercel.app" />
+  <link rel="alternate" hreflang="en" href="https://earn-sathi-nepal.vercel.app/" />
+  <link rel="alternate" hreflang="x-default" href="https://earn-sathi-nepal.vercel.app/" />
+
+  <!-- OpenGraph / Social Preview -->
+  <meta property="og:site_name" content="EarnSathi Nepal" />
+  <meta property="og:title" content="EarnSathi – Nepal's #1 Rewards App | Earn & Redeem via eSewa/Khalti" />
+  <meta property="og:description"
+    content="Download EarnSathi free APK. Complete fun tasks like quizzes, spin wheels & scratch cards. Earn points and redeem instantly to eSewa or Khalti. Trusted by 5,000+ Nepali users." />
+  <meta property="og:image" content="https://earn-sathi-nepal.vercel.app/logo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="EarnSathi Nepal - Earn rewards and redeem via eSewa and Khalti" />
+  <meta property="og:url" content="https://earn-sathi-nepal.vercel.app" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EarnSathi – Nepal's #1 Rewards App | Earn & Redeem via eSewa/Khalti" />
+  <meta name="twitter:description"
+    content="Download the free APK. Play quizzes, spin wheels & scratch cards. Earn points and redeem instantly to eSewa or Khalti. 100% safe." />
+  <meta name="twitter:image" content="https://earn-sathi-nepal.vercel.app/logo.png" />
+  <meta name="twitter:image:alt" content="EarnSathi Nepal rewards app" />
+
+  <!-- JSON-LD: SoftwareApplication -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "EarnSathi",
+      "alternateName": "EarnSathi Nepal",
       "operatingSystem": "Android 6.0+",
       "applicationCategory": "FinanceApplication",
       "offers": {
         "@type": "Offer",
         "price": "0",
-        "priceCurrency": "NPR"
+        "priceCurrency": "NPR",
+        "availability": "https://schema.org/InStock"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.7",
-        "ratingCount": "1240"
+        "ratingCount": "1240",
+        "bestRating": "5",
+        "worstRating": "1"
       },
-      "description": "EarnSathi is Nepal's trusted rewards app. Complete micro-tasks, earn points, and redeem instantly via eSewa or Khalti.",
-      "url": "https://earnsathi.com",
-      "downloadUrl": "https://earnsathi.com/download",
+      "description": "EarnSathi is Nepal's most trusted rewards app. Complete gamified micro-tasks like daily quizzes, spin wheels, scratch cards, and mystery boxes. Earn points and redeem instantly via eSewa or Khalti.",
+      "url": "https://earn-sathi-nepal.vercel.app",
+      "downloadUrl": "https://earn-sathi-nepal.vercel.app/download",
       "softwareVersion": "2.1.0",
       "fileSize": "14MB",
       "countriesSupported": "NP",
-      "screenshot": "https://earnsathi.com/screenshot.png"
+      "screenshot": "https://earn-sathi-nepal.vercel.app/screenshot.png",
+      "author": {
+        "@type": "Organization",
+        "name": "EarnSathi Nepal",
+        "url": "https://earn-sathi-nepal.vercel.app"
+      }
     }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+  </script>
 
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "EarnSathi Nepal",
+      "url": "https://earn-sathi-nepal.vercel.app",
+      "logo": "https://earn-sathi-nepal.vercel.app/logo.png",
+      "description": "Nepal's premium gamified reward ecosystem. Earn points through micro-tasks and redeem via eSewa and Khalti.",
+      "foundingDate": "2026",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Sarlahi, Nepal"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Nepal"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "shadowcoretechnology@gmail.com",
+        "contactType": "customer support"
+      }
+    }
+  </script>
+
+  <!-- JSON-LD: FAQPage (for Google rich snippets) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does EarnSathi use direct APK download instead of Play Store?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EarnSathi offers direct cash rewards that often conflict with Google Play's strict regional policies for digital rewards in Nepal. By offering a direct download, we can pass 100% of the rewards to you without heavy platform fees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is EarnSathi safe to download and use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every EarnSathi build is scanned by 60+ antivirus engines including BitDefender, Kaspersky, and Google Safe Browsing via VirusTotal. The app uses SSL encryption, anti-fraud checks, and has zero malicious detections."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I earn money with EarnSathi in Nepal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Download the free APK, create an account, and complete gamified micro-tasks like daily quizzes, spin wheels, scratch cards, watching ads, and mystery boxes. Points accumulate in your Unified Wallet and can be redeemed instantly via eSewa or Khalti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I withdraw my earnings from EarnSathi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Once you reach the minimum withdrawal threshold, you can instantly redeem your points to eSewa or Khalti. Payouts are processed automatically with real-time NPR conversion and transparent audit logs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who can use EarnSathi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EarnSathi is available for all residents of Nepal aged 13 and above. You need an Android device running Android 6.0 or later and either an eSewa or Khalti account for withdrawals."
+          }
+        }
+      ]
+    }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://earn-sathi-nepal.vercel.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Download APK", "item": "https://earn-sathi-nepal.vercel.app/download" },
+        { "@type": "ListItem", "position": 3, "name": "About Us", "item": "https://earn-sathi-nepal.vercel.app/about" },
+        { "@type": "ListItem", "position": 4, "name": "Privacy Policy", "item": "https://earn-sathi-nepal.vercel.app/privacy" },
+        { "@type": "ListItem", "position": 5, "name": "Terms & Conditions", "item": "https://earn-sathi-nepal.vercel.app/terms" },
+        { "@type": "ListItem", "position": 6, "name": "Data Safety", "item": "https://earn-sathi-nepal.vercel.app/data-safety" },
+        { "@type": "ListItem", "position": 7, "name": "Safety Regulations", "item": "https://earn-sathi-nepal.vercel.app/safety-regulations" }
+      ]
+    }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

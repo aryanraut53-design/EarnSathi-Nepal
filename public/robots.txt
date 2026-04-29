@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Allow: /download
+Allow: /about
+Allow: /privacy
+Allow: /terms
+Allow: /data-safety
+Allow: /safety-regulations
+
+Disallow: /api/
+Disallow: /_next/
+Disallow: /assets/*.map
+
+Crawl-delay: 1
+
+Sitemap: https://earn-sathi-nepal.vercel.app/sitemap.xml

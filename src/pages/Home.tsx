@@ -12,9 +12,19 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>EarnSathi – Earn Points & Redeem via eSewa/Khalti | Nepal's #1 Rewards App</title>
-        <meta name="description" content="Download EarnSathi APK – Nepal's trusted rewards app. Complete tasks, earn points, and instantly redeem via eSewa or Khalti. Safe, free, no Play Store needed." />
-        <link rel="canonical" href="https://earnsathi.com" />
+        <title>EarnSathi – Nepal's #1 Rewards App | Earn Points & Redeem via eSewa & Khalti</title>
+        <meta name="description" content="EarnSathi is Nepal's most trusted rewards app. Download the free APK, play daily quizzes, spin wheels, scratch cards & mystery boxes. Earn points and instantly redeem via eSewa or Khalti. 100% safe, verified by VirusTotal." />
+        <meta name="keywords" content="EarnSathi, earn money Nepal, rewards app Nepal, eSewa rewards, Khalti rewards, free APK download Nepal, online earning Nepal, paisa kamaaune app, quiz earn Nepal, spin earn, scratch card Nepal" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://earn-sathi-nepal.vercel.app" />
+        <meta property="og:site_name" content="EarnSathi Nepal" />
+        <meta property="og:title" content="EarnSathi – Nepal's #1 Rewards App | Earn & Redeem via eSewa/Khalti" />
+        <meta property="og:description" content="Download EarnSathi free APK. Play quizzes, spin wheels & scratch cards. Earn points and redeem instantly to eSewa or Khalti. Trusted by 5,000+ users." />
+        <meta property="og:url" content="https://earn-sathi-nepal.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="EarnSathi – Nepal's #1 Rewards App | Earn & Redeem via eSewa/Khalti" />
+        <meta name="twitter:description" content="Download EarnSathi free APK. Play quizzes, spin wheels & scratch cards. Redeem instantly to eSewa or Khalti." />
       </Helmet>
 
       <div className="pt-20 lg:pt-24 min-h-screen">

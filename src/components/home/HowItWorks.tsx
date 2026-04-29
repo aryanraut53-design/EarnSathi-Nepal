@@ -52,7 +52,7 @@ export default function HowItWorks() {
               className="flex flex-col items-center sm:items-start group relative"
             >
               {/* Background Number Watermark */}
-              <div className="absolute -top-10 sm:-left-6 text-[120px] font-black text-slate-900/5 dark:text-white/5 select-none -z-10 transition-transform group-hover:-translate-y-2 group-hover:text-indigo-900/5 dark:group-hover:text-indigo-100/5 duration-500">
+              <div className="absolute -top-6 sm:-top-10 left-1/2 -translate-x-1/2 sm:left-[-1.5rem] sm:translate-x-0 text-[80px] sm:text-[120px] font-black text-slate-900/5 dark:text-white/5 select-none -z-10 transition-transform group-hover:-translate-y-2 group-hover:text-indigo-900/5 dark:group-hover:text-indigo-100/5 duration-500">
                 {step.number}
               </div>
 

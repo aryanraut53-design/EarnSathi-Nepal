@@ -14,7 +14,19 @@ export default function Terms() {
   return (
     <>
       <Helmet>
-        <title>Terms & Conditions - EarnSathi Nepal</title>
+        <title>Terms & Conditions – EarnSathi Nepal | Usage Policies & Guidelines</title>
+        <meta name="description" content="Review EarnSathi's Terms and Conditions. Understand our policies on eligibility, user conduct, point conversion, eSewa/Khalti payouts, and account management for Nepal's rewards platform." />
+        <meta name="keywords" content="EarnSathi terms, EarnSathi conditions, Nepal rewards app rules, eSewa Khalti payout terms, EarnSathi eligibility, user conduct policy, point conversion Nepal" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:site_name" content="EarnSathi Nepal" />
+        <meta property="og:title" content="EarnSathi Terms & Conditions – Usage Policies" />
+        <meta property="og:description" content="Rules and guidelines for using Nepal's favorite rewards app. Fair play, eligibility, and payout policies." />
+        <meta property="og:url" content="https://earn-sathi-nepal.vercel.app/terms" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="EarnSathi Terms & Conditions" />
+        <meta name="twitter:description" content="Usage policies and guidelines for Nepal's #1 rewards app." />
+        <link rel="canonical" href="https://earn-sathi-nepal.vercel.app/terms" />
       </Helmet>
       
       <div className="pt-24 pb-20 bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors">

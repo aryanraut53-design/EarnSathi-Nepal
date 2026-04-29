@@ -34,7 +34,19 @@ export default function Download() {
   return (
     <>
       <Helmet>
-        <title>Download EarnSathi APK - Free Rewards App Nepal</title>
+        <title>Download EarnSathi APK Free – Safe & Verified Rewards App for Nepal | eSewa & Khalti Payout</title>
+        <meta name="description" content="Download the latest EarnSathi APK for free. 100% safe, scanned by 60+ antivirus engines via VirusTotal. Start earning rewards in Nepal and withdraw instantly to eSewa or Khalti. No Play Store required." />
+        <meta name="keywords" content="download EarnSathi APK, EarnSathi download, free APK Nepal, rewards app download, earn money app Nepal, eSewa earning app download, Khalti rewards download, safe APK Nepal, EarnSathi latest version" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:site_name" content="EarnSathi Nepal" />
+        <meta property="og:title" content="Download EarnSathi APK Free – Safe & Verified Rewards App for Nepal" />
+        <meta property="og:description" content="Safe and secure download for Nepal's favorite rewards app. Verified by VirusTotal. Earn and redeem via eSewa or Khalti." />
+        <meta property="og:url" content="https://earn-sathi-nepal.vercel.app/download" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Download EarnSathi APK Free – Safe Rewards App for Nepal" />
+        <meta name="twitter:description" content="Download verified APK. Earn rewards and redeem via eSewa or Khalti. 100% safe." />
+        <link rel="canonical" href="https://earn-sathi-nepal.vercel.app/download" />
       </Helmet>
       
       <div className="pt-24 pb-20 min-h-[80vh] flex items-center justify-center bg-slate-50 dark:bg-slate-950 transition-colors">

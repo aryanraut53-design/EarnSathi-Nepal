@@ -6,7 +6,19 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About Us - EarnSathi Nepal</title>
+        <title>About EarnSathi Nepal – Our Mission to Empower Nepali Youth Through Digital Rewards</title>
+        <meta name="description" content="Discover the story behind EarnSathi – Nepal's premium gamified rewards platform built in Sarlahi. Learn about our mission to empower Nepali youth through digital rewards, eSewa & Khalti payouts." />
+        <meta name="keywords" content="about EarnSathi, EarnSathi Nepal team, Nepal rewards company, digital earning Nepal, Nepali startup, Sarlahi Nepal, earn money app story, eSewa Khalti platform" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:site_name" content="EarnSathi Nepal" />
+        <meta property="og:title" content="About EarnSathi - Nepal's #1 Gamified Rewards Platform" />
+        <meta property="og:description" content="Empowering Nepal through digital rewards. Learn about our mission to give every Nepali youth a fair earning opportunity." />
+        <meta property="og:url" content="https://earn-sathi-nepal.vercel.app/about" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About EarnSathi Nepal – Empowering Nepali Youth" />
+        <meta name="twitter:description" content="Nepal's premium gamified reward ecosystem. Learn our story and mission." />
+        <link rel="canonical" href="https://earn-sathi-nepal.vercel.app/about" />
       </Helmet>
       
       <div className="pt-24 pb-20 bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors">

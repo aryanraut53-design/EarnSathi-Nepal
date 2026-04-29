@@ -6,7 +6,19 @@ export default function Privacy() {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - EarnSathi Nepal</title>
+        <title>Privacy Policy – EarnSathi Nepal | How We Protect Your Data</title>
+        <meta name="description" content="Read EarnSathi's privacy policy. Learn how we collect, use, and protect your data with AES-256 encryption. We never sell your personal information. Request data deletion anytime." />
+        <meta name="keywords" content="EarnSathi privacy policy, data protection Nepal, EarnSathi data safety, user privacy Nepal rewards app, eSewa Khalti data security, Nepal app privacy" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:site_name" content="EarnSathi Nepal" />
+        <meta property="og:title" content="EarnSathi Privacy Policy – Transparent Data Practices" />
+        <meta property="og:description" content="Our commitment to your data privacy and security. AES-256 encryption, no third-party data sales." />
+        <meta property="og:url" content="https://earn-sathi-nepal.vercel.app/privacy" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="EarnSathi Privacy Policy" />
+        <meta name="twitter:description" content="How EarnSathi protects your data. Transparent, encrypted, and secure." />
+        <link rel="canonical" href="https://earn-sathi-nepal.vercel.app/privacy" />
       </Helmet>
       
       <div className="pt-24 pb-20 bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors">

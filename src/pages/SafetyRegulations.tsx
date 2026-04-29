@@ -29,7 +29,19 @@ export default function SafetyRegulations() {
   return (
     <>
       <Helmet>
-        <title>App Safety Regulations - EarnSathi Nepal</title>
+        <title>App Safety Regulations – EarnSathi Nepal | Fair Play & Anti-Fraud Policy</title>
+        <meta name="description" content="Review EarnSathi's app safety regulations. Fair play policy, single account enforcement, VPN restrictions, and withdrawal integrity checks. Zero tolerance for fraud to protect honest Nepali users." />
+        <meta name="keywords" content="EarnSathi safety rules, fair play policy Nepal, anti-fraud Nepal app, VPN restriction rewards, account safety EarnSathi, withdrawal verification, single account policy, Nepal rewards regulations" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:site_name" content="EarnSathi Nepal" />
+        <meta property="og:title" content="EarnSathi Safety Regulations – Fair Play & Anti-Fraud" />
+        <meta property="og:description" content="Ensuring a fair and secure rewards ecosystem for all Nepali users. Zero tolerance for fraud." />
+        <meta property="og:url" content="https://earn-sathi-nepal.vercel.app/safety-regulations" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="EarnSathi Safety Regulations" />
+        <meta name="twitter:description" content="Fair play policy and anti-fraud measures for Nepal's rewards ecosystem." />
+        <link rel="canonical" href="https://earn-sathi-nepal.vercel.app/safety-regulations" />
       </Helmet>
       
       <div className="pt-24 pb-20 bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors">

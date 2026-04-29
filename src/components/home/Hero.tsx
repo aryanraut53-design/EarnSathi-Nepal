@@ -52,14 +52,14 @@ export default function Hero() {
               <MadeInNepal />
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.05] mb-8 tracking-tight text-slate-900 dark:text-white">
-              Earn Real Rewards <br />
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black leading-[1.1] sm:leading-[1.05] mb-6 sm:mb-8 tracking-tight text-slate-900 dark:text-white">
+              Earn Real Rewards <br className="hidden sm:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600 dark:from-brand-400 dark:to-indigo-400"> 
                 in Nepal.
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-xl leading-relaxed">
+            <p className="text-base sm:text-xl text-slate-600 dark:text-slate-400 mb-8 sm:mb-10 max-w-xl leading-relaxed">
               Experience the premium gamified reward platform. Spin, scratch, and quiz your way to rewards. Withdraw instantly to <span className="font-bold text-slate-900 dark:text-white underline decoration-brand-500/30">eSewa or Khalti</span>.
             </p>
 
@@ -78,7 +78,7 @@ export default function Hero() {
                 <Link
                   to={isLoading ? "#" : "/download"}
                   onClick={handleDownloadClick}
-                  className={`relative w-full sm:w-max ${isLoading ? 'bg-brand-500' : 'bg-brand-600'} text-white text-lg sm:text-xl font-bold py-5 px-10 rounded-2xl shadow-xl shadow-brand-600/20 hover:bg-brand-700 active:scale-[0.98] transition-all duration-300 flex flex-col sm:flex-row items-center justify-center gap-3 overflow-hidden group`}
+                  className={`relative w-full sm:w-max ${isLoading ? 'bg-brand-500' : 'bg-brand-600'} text-white text-base sm:text-xl font-bold py-4 sm:py-5 px-6 sm:px-10 rounded-2xl shadow-xl shadow-brand-600/20 hover:bg-brand-700 active:scale-[0.98] transition-all duration-300 flex flex-col sm:flex-row items-center justify-center gap-3 overflow-hidden group`}
                 >
                   <motion.div
                     className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out"
@@ -95,10 +95,15 @@ export default function Hero() {
                     </motion.div>
                   ) : (
                     <>
-                      <Download className="w-6 h-6 group-hover:scale-110 transition-transform relative z-10" />
-                      <span className="text-center relative z-10">
-                        Download EarnSathi APK <span className="text-brand-300 font-normal text-xs sm:text-sm ml-1 block sm:inline">(v1.0.0 &middot; 24 MB)</span>
-                      </span>
+                      <Download className="w-5 highlight-none h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform relative z-10" />
+                      <div className="flex flex-col sm:items-start items-center">
+                        <span className="text-center relative z-10 leading-tight">
+                          Download EarnSathi APK
+                        </span>
+                        <span className="text-brand-300 font-normal text-[10px] sm:text-sm relative z-10 leading-tight">
+                          (v1.0.0 &middot; 24 MB)
+                        </span>
+                      </div>
                     </>
                   )}
                 </Link>

@@ -24,7 +24,19 @@ export default function DataSafety() {
   return (
     <>
       <Helmet>
-        <title>Data Safety & Security - EarnSathi Nepal</title>
+        <title>Data Safety & Security – EarnSathi Nepal | AES-256 Encrypted Rewards Platform</title>
+        <meta name="description" content="Learn about EarnSathi's data safety practices. AES-256 encryption, no third-party data sharing, root detection, and 24/7 security monitoring on Nepali cloud servers. Your rewards data is protected." />
+        <meta name="keywords" content="EarnSathi data safety, data security Nepal, encrypted rewards app, AES-256 Nepal app, secure earning platform, no third-party data, device security Nepal, app integrity check" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:site_name" content="EarnSathi Nepal" />
+        <meta property="og:title" content="Data Safety at EarnSathi – AES-256 Encrypted Security" />
+        <meta property="og:description" content="Transparent and secure data management practices. AES-256 encryption and 24/7 monitoring for Nepal's rewards app." />
+        <meta property="og:url" content="https://earn-sathi-nepal.vercel.app/data-safety" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="EarnSathi Data Safety & Security" />
+        <meta name="twitter:description" content="AES-256 encryption, no third-party data access. Your rewards are secure." />
+        <link rel="canonical" href="https://earn-sathi-nepal.vercel.app/data-safety" />
       </Helmet>
       
       <div className="pt-24 pb-20 bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors">
