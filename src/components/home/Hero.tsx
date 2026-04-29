@@ -97,7 +97,7 @@ export default function Hero() {
                     <>
                       <Download className="w-6 h-6 group-hover:scale-110 transition-transform relative z-10" />
                       <span className="text-center relative z-10">
-                        Download EarnSathi APK <span className="text-brand-300 font-normal text-xs sm:text-sm ml-1 block sm:inline">(v1.0.0 &middot; 63 MB)</span>
+                        Download EarnSathi APK <span className="text-brand-300 font-normal text-xs sm:text-sm ml-1 block sm:inline">(v1.0.0 &middot; 24 MB)</span>
                       </span>
                     </>
                   )}
