@@ -10,7 +10,6 @@ interface Review {
   quote: string;
   rating: number;
   color: string;
-  avatar: string;
   earnedAmount: string;
   timeOnPlatform: string;
   payoutMethod: 'eSewa' | 'Khalti';
@@ -46,7 +45,6 @@ export default function Testimonials() {
       quote: "I was honestly skeptical at first — another \"earn money\" app, right? But my roommate showed me her eSewa balance and I had to try it. Been using it for 3 weeks now, already withdrew Rs. 450. The spin wheel is addictive ngl 😅",
       rating: 5,
       color: "bg-gradient-to-br from-indigo-500 to-purple-600 text-white",
-      avatar: "https://i.pravatar.cc/96?u=sita-rai-ktm",
       earnedAmount: "Rs. 1,280",
       timeOnPlatform: "3 weeks",
       payoutMethod: "eSewa",
@@ -61,7 +59,6 @@ export default function Testimonials() {
       quote: "Finally an app that actually pays in Nepal. I've tried like 5-6 other apps before and they all had some catch or minimum withdrawal that's impossible to reach. EarnSathi let me withdraw to Khalti within my first week. The quiz section is fun too, feels like KBC 😂",
       rating: 5,
       color: "bg-gradient-to-br from-blue-500 to-indigo-600 text-white",
-      avatar: "https://i.pravatar.cc/96?u=bikash-thapa-pkr",
       earnedAmount: "Rs. 3,750",
       timeOnPlatform: "2 months",
       payoutMethod: "Khalti",
@@ -76,7 +73,6 @@ export default function Testimonials() {
       quote: "My husband didn't believe me when I showed him the Khalti notification 😂 \"Kasle pathayo?\" he said. Now he also has the app installed. I do the scratch cards while watching TV in the evening. Easy pocket money for someone who stays home.",
       rating: 5,
       color: "bg-gradient-to-br from-rose-400 to-orange-500 text-white",
-      avatar: "https://i.pravatar.cc/96?u=pooja-sharma-brt",
       earnedAmount: "Rs. 2,100",
       timeOnPlatform: "1 month",
       payoutMethod: "Khalti",
@@ -91,7 +87,6 @@ export default function Testimonials() {
       quote: "Bro this app is actually legit. My friends thought it was fake but I showed them my eSewa transaction history. The daily streak bonus is smart — missed one day and lost my 12-day streak tho, that hurt 💀 But still the best earning app I've found.",
       rating: 4,
       color: "bg-gradient-to-br from-emerald-400 to-teal-500 text-white",
-      avatar: "https://i.pravatar.cc/96?u=nabin-karki-btl",
       earnedAmount: "Rs. 890",
       timeOnPlatform: "3 weeks",
       payoutMethod: "eSewa",
@@ -106,7 +101,6 @@ export default function Testimonials() {
       quote: "I run a small cosmetics shop and use this app during free time. It's not going to make you rich, but Rs 200-300 extra per week for doing quizzes and spinning the wheel? That's my tea and momo money sorted 😄 Withdrawal was instant to eSewa.",
       rating: 5,
       color: "bg-gradient-to-br from-amber-400 to-orange-500 text-white",
-      avatar: "https://i.pravatar.cc/96?u=anita-gurung-ctw",
       earnedAmount: "Rs. 1,650",
       timeOnPlatform: "6 weeks",
       payoutMethod: "eSewa",
@@ -121,7 +115,6 @@ export default function Testimonials() {
       quote: "What I appreciate most is the transparency. You can literally see the audit logs for every point you earn. No shady stuff. I checked the APK on VirusTotal myself before installing — 0 detections. These guys are doing it properly. Respect 🙏",
       rating: 5,
       color: "bg-gradient-to-br from-cyan-500 to-blue-600 text-white",
-      avatar: "https://i.pravatar.cc/96?u=rajan-dangol-ltp",
       earnedAmount: "Rs. 4,200",
       timeOnPlatform: "3 months",
       payoutMethod: "Khalti",
@@ -136,7 +129,6 @@ export default function Testimonials() {
       quote: "Night shift maa boring huncha so I started using EarnSathi. The mystery box is so exciting — got 500 bonus points once! Khalti withdrawal came in literally 2 minutes. My colleagues are all downloading it now after seeing mine 😊",
       rating: 5,
       color: "bg-gradient-to-br from-pink-500 to-rose-600 text-white",
-      avatar: "https://i.pravatar.cc/96?u=sunita-magar-dhr",
       earnedAmount: "Rs. 2,800",
       timeOnPlatform: "2 months",
       payoutMethod: "Khalti",
@@ -151,7 +143,6 @@ export default function Testimonials() {
       quote: "I teach in a government school and the salary... you know how it is. This app genuinely helps. I do the daily quiz during lunch break — the questions are actually interesting, not just random spam. Withdrew Rs. 600 last week to eSewa, no issues at all.",
       rating: 4,
       color: "bg-gradient-to-br from-violet-500 to-purple-600 text-white",
-      avatar: "https://i.pravatar.cc/96?u=dipesh-poudel-htd",
       earnedAmount: "Rs. 1,950",
       timeOnPlatform: "5 weeks",
       payoutMethod: "eSewa",
@@ -243,12 +234,9 @@ export default function Testimonials() {
 
                   {/* User info */}
                   <div className="flex items-center gap-3 pt-5 border-t border-slate-100 dark:border-white/10">
-                    <img 
-                      src={review.avatar} 
-                      alt={`${review.name} from ${review.location}`}
-                      className="w-11 h-11 rounded-2xl object-cover shadow-sm border-2 border-white dark:border-slate-800"
-                      loading="lazy"
-                    />
+                    <div className={`w-11 h-11 rounded-2xl flex items-center justify-center font-bold text-sm shadow-sm border-2 border-white dark:border-slate-800 shrink-0 ${review.color}`}>
+                      {review.initials}
+                    </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-1.5">
                         <h4 className="text-slate-900 dark:text-white font-bold text-sm leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors truncate">
