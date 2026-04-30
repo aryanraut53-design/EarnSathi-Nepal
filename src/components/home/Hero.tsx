@@ -101,7 +101,7 @@ export default function Hero() {
                           Download EarnSathi APK
                         </span>
                         <span className="text-brand-300 font-normal text-[10px] sm:text-sm relative z-10 leading-tight">
-                          (v1.0.0 &middot; 24 MB)
+                          (v1.0.0 &middot; 63 MB)
                         </span>
                       </div>
                     </>

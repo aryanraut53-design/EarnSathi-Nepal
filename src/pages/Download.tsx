@@ -8,8 +8,7 @@ export default function Download() {
   const [downloading, setDownloading] = useState(false);
 
   // Replace this with your ACTUAL MediaFire direct download link
-  const MEDIAFIRE_DIRECT_LINK = "https://download1348.mediafire.com/b3bogx8tbdqg-MbNnfG6abmq5JTvZK-83BvOUkW6FBXNXhCVFiwv32WQHQLV2rKTI_lySlzYGQQLwtMxj0XuNC-2mz__r0u1NNC5GLKZPFhz_wzu0k8QSbbDHxklS7eEDbQzQ57hcHCvC5-Fxk9hwjasIRfy528Gp-9eE5fJiGa7/eh0jkauuy5gs37w/EarnSathi.apk"; 
-
+  const MEDIAFIRE_DIRECT_LINK = "https://download1339.mediafire.com/u40wzgtykcwg7_o6lJwdjwW5oD9PP2qKEPz480VjEYuEvYv-IBHrQ2gm-a97cDzTsj5tasXCdD97YBP-3nMF7C9cB05eZjskgv675dUA-8TN1ctKuiHP2-ocfScslZuAZrIkM-qKO7XqkQ4FoaWcIrGwQeyrC0636X-uYqSj_Kk_jlk/x91a5ve9bv5tt8z/EarnSathi+%282%29.apk"
   const startDownload = () => {
     setDownloading(true);
     
